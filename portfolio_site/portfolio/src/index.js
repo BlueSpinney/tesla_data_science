@@ -12,6 +12,9 @@ class Base extends React.PureComponent{
     render(){
         return(
             <>
+                <div class = "plane">
+                    <button class = "selector" onClick={() => this.ren(insights)}>insights</button>
+                </div>
             </>
         );
     }
