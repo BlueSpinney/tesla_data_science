@@ -1,15 +1,246 @@
-p{
-    color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+@keyframes menu_fade{
+    0% {color:rgb(230, 230, 230);}
+
+    100% {color: white}
+}
+@keyframes menu_fade_{
+    100% {color: rgb(230, 230, 230);}
+
+    0% {color: white;}
 }
 
-.plane{
+@keyframes entry {
+    0%   {background-color: #23272e ;}
+    0% {border-color: #1a1b1d;}
+
+    100% {background-color: #323337 ;}
+    100% {border-color: #323337;}
+  }
+@keyframes exit {
+    0% {background-color: #323337;}
+    0% {border-color: #323337;}
+    
+
+    100%   {background-color: #23272e;}
+    100% {border-color: #1a1b1d;}
+    50%   {color : white;}
+    
+}
+@keyframes qna {
+    0% {border-color:#323337;}
+    0% {border-style: dotted;}
+    0%{opacity: 80%;}
+
+    100% {border-style: solid;}
+    100%{border-color: #4b4c52;}
+    100%{opacity: 100%;}
+}
+
+@keyframes anq {
+    100% {border-color:#323337;}
+    100% {border-style: dotted;}
+    100%{opacity: 80%;}
+
+    0% {border-style: solid;}
+    0%{border-color: #4b4c52;}
+    0%{opacity: 100%;}
+}
+@keyframes anq_ {
+    100% {border-color:#323337;}
+    100% {border-style: dotted;}
+
+    0% {border-style: solid;}
+    0%{border-color: #4b4c52;}
+}
+@keyframes qna_ {
+    0% {border-color:#323337;}
+    0% {border-style: dotted;}
+
+    100% {border-style: solid;}
+    100%{border-color: #4b4c52;}
+}
+
+h1{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 500%;
+    z-index: 1;
+}
+
+.qna_background{
+    position: absolute;
+    left: 0%;
+    top:0%;
+    width: 100%;
+    height: 150%;
+    background-color:black;
+    animation-name: qna_loop;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.menu_button{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color:white;
+    background-color: #23272e;
+    border-radius: 25px;
+    margin: 4%;
+    width: 20%;
+    font-size: 400%;
+    border:solid;
+    border-color: #1a1b1d;
+    animation-name: exit;
+    animation-duration: 0.5s;
+}
+.menu_button:hover{
+    animation-name: entry;
+    animation-duration: 0.2s;
+
+    background-color: rgb(49, 52, 58) ;
+    border-color: #323337;
+
+}
+.center {
     display: flex;
     justify-content: center;
 }
+.return_to_menu_{
+    width:3.34%;
+    height: 6%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 200%;
+    background-color: #000000;
+    color:rgb(202, 202, 202);
+    position:fixed;
+    border-radius: 900%;
+    border-style: none;
+    top:51.2%;
+    z-index:100;
+    animation-name: menu_fade_;
+    animation-duration: 0.1s;
+}
+.return_to_menu_:hover{
+    animation-name: menu_fade;
+    animation-duration: 0.1s;
+    color:white;
+}
 
-.selector {
-    background-color: #23272e;
+.return_to_menu{
+    border-style: none;
+    left: 2%;
+    width:3.34%;
+    height: 6%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 200%;
+    background-color: #000000;
+    color:rgb(202, 202, 202);
+    position:fixed;
+    border-radius: 900%;
+    top:50.1%;
+    z-index:100;
+    animation-name: menu_fade_;
+    animation-duration: 0.1s;
+}
+.return_to_menu:hover{
+    animation-name: menu_fade;
+    animation-duration: 0.1s;
+    color:white;
+}
+
+.Datapoint{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border-style: dotted;
-    border-color: rgb(57, 67, 73);
+    border-color: #2f353e;
+    border-radius: 25px;
+    background-color: #2f353e;
+    opacity: 80%;
+    padding: 1%;
+    width: 60%;
+    z-index: 9;
+    animation-name: anq_;
+    animation-duration: 0.2s;
+}
+.Datapoint:hover{
+    animation-name: qna_;
+    animation-duration: 0.4s;
+    border-style: solid;
+    border-color: #4b4c52;
+    opacity: 80%;
+}
+.Datapointimg{
+    position: relative;
+    left:48%;
+}
+
+.img_holder{
+    position: absolute;
+}
+.res_b{
+    position: absolute;
+    height: 200%;
+    width: 100%;
+    top: 0%;
+    left:0%;
+    opacity: 80%;
+    z-index: 0;
+    
+}
+.code_content{
+    position: absolute;
+    top : 1%;
+    left: 37.5%;
+}
+
+.code_text{
+    position: relative;
+    top: 10vh;
+    max-width: 983px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #000000;
+    opacity: 92%;
+    flood-opacity: 100%;
+    margin: 5px;
+    padding: 2%;
+    color: white;
+}
+.into{
+    position: absolute;
+
+    font-size: 150%;
+    color:white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.pos{
+    position: absolute;
+    top: 70%;
+    left:15%;
+}
+
+.Question{
+    position: relative;
+    top: 10vh;
+    border-style: dotted;
+    border-color: #323337;
+    margin: 1%;
+    padding: 1%;
+    padding-top: 0%;
+    max-width: 70%;
+    max-height: 60%;
+    border-radius: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    animation-name: anq;
+    opacity: 80%;
+    animation-duration: 0.4s;
+}
+.Question:hover{
+    animation-name: qna;
+    animation-duration: 0.4s;
+    opacity: 100%;
+    border-style: solid;
+    border-color: #4b4c52;
 }
